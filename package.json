@@ -1,0 +1,35 @@
+{
+  "name": "chat-system-api",
+  "version": "1.0.0",
+  "description": "api for chating app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abhishekthepra7/chat-system-api.git"
+  },
+  "keywords": [
+    "chat-system",
+    "messaging"
+  ],
+  "author": "Abhishek thepra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abhishekthepra7/chat-system-api/issues"
+  },
+  "homepage": "https://github.com/abhishekthepra7/chat-system-api#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.20.0",
+    "config": "^3.3.7",
+    "express": "^4.18.1",
+    "http-errors": "^2.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "passport": "^0.6.0",
+    "sqlite": "^4.1.1",
+    "sqlite3": "^5.0.8"
+  }
+}
