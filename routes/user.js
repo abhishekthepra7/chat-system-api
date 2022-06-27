@@ -28,11 +28,11 @@ router.post("/", async (req, resp, next) => {
     // check if the requestor is an admin
     const user = await userHandler.getUser(req.identity.userId);
     if(!user.isAdmin) {
-        return next(createHttpError(400, "Only admin can add/moify user"));
+        return next(createHttpError(401, "Only admin can add/moify user"));
     }
 
     const { userId, name, password, isAdmin = false } = req.body;
-    if(!userId || !name || !password) return next(createHttpError(401, "Please provide userId, name * password"))
+    if(!userId || !name || !password) return next(createHttpError(400, "Please provide userId, name & password"))
     const user1 = await userHandler.getUser(userId);
     if(user1) {
         next(createHttpError(400, "user already exists"));

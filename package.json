@@ -4,8 +4,8 @@
   "description": "api for chating app",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "node index.js",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,12 @@
     "url": "https://github.com/abhishekthepra7/chat-system-api/issues"
   },
   "homepage": "https://github.com/abhishekthepra7/chat-system-api#readme",
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
+  },
   "dependencies": {
     "bcrypt": "^5.0.1",
     "body-parser": "^1.20.0",
@@ -31,5 +37,9 @@
     "passport": "^0.6.0",
     "sqlite": "^4.1.1",
     "sqlite3": "^5.0.8"
+  },
+  "devDependencies": {
+    "axios": "^0.27.2",
+    "jest": "^28.1.1"
   }
 }
